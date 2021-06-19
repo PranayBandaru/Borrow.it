@@ -7,6 +7,6 @@ import LoginScreen from './app/screens/LoginScreen';
 import SignUpScreen from './app/screens/SignUpScreen';
 
 export default function App() {
-  return <SignUpScreen />
+  return <WelcomeScreen />
 }
 
