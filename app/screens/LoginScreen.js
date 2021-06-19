@@ -1,15 +1,17 @@
 import React from 'react';
 import { Image, StyleSheet, TextInput,Button, View, Text, SafeAreaView, TouchableOpacity } from 'react-native';
 
+import AppButton from '../components/AppButton';
+
+
 function LoginScreen(props) {
     return (
         <SafeAreaView style={styles.window}>
+            <Image source={require("../assets/borrowit-logo.png")} />
             <TextInput style={styles.userNameBar} placeholder="Username" />
             <TextInput secureTextEntry={true} style={styles.passwordBar} placeholder="Password" />
-            <Pressable style={styles.button} onPress={onPress}>
-                <Text style={styles.text}>{title}</Text>
-            </Pressable>
-            <Button title="Login" width="60" onPress={() => {alert("You clicked for login")}} />
+            <AppButton title="Login" color="#0c7171" onPress={() => {alert("You clicked for login")}} />
+            <AppButton title="Sign In" color="#0c7171" onPress={() => {alert("You clicked for SignIn")}} />
         </SafeAreaView>
     );
 }
@@ -49,8 +51,5 @@ const styles = StyleSheet.create({
         //borderColor: "grey",
         backgroundColor: "#fff",
     },
-    loginButton: {
-        width: 50,
-    }
 })
 export default LoginScreen;
