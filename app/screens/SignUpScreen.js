@@ -5,7 +5,7 @@ import { Image, StyleSheet, TextInput, Button, View, Text, SafeAreaView, Touchab
 function SignUpScreen(props) {
     return (
         <SafeAreaView style={styles.window}>
-            <Text style={styles.pageHeader}>Sign-Up</Text>
+            <Text style={styles.pageHeader}>  Sign Up</Text>
             <Text style={styles.labels}>First Name</Text>
             <TextInput style={styles.userinputs} placeholder="FirstName" />
             <Text style={styles.labels}>Last Name</Text>
@@ -17,7 +17,7 @@ function SignUpScreen(props) {
             <Text style={styles.labels}>Re-Type Password</Text>
             <TextInput secureTextEntry={true} style={styles.userinputs} placeholder="Re-Password" />
             <TouchableOpacity style={styles.buttonContainer} onPress={() => { alert("You clicked for login") }}>
-                <Text style={styles.buttonText}>Sign Up</Text>
+                <Text style={styles.buttonText}>  Sign Up</Text>
             </TouchableOpacity>
 
         </SafeAreaView>
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     labels: {
-        paddingBottom: 10,
+        paddingBottom: 3,
     },
     userinputs: {
         width: '60%',
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     buttonContainer: {
         width: "60%",
         height: 50,
-        marginTop: 20,
+        marginTop: 35,
         alignItems: "center",
         padding: 15,
         borderRadius: 25,
@@ -63,9 +63,8 @@ const styles = StyleSheet.create({
     },
     pageHeader: {
         color: "#0c7171",
-        fontSize: 20,
-        paddingBottom: 30,
+        fontSize: 23,
+        paddingBottom: 40,
         textTransform: "uppercase",
-        fontWeight: "bold",
     }
 })
