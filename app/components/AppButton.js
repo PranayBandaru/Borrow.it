@@ -17,7 +17,8 @@ function AppButton({ title, color, onPress, ...otherProps }) {
 
 const styles = StyleSheet.create({
   container: {
-    width: "40%",
+    width: "60%",
+    height: 35,
     alignItems: "center",
     justifyContent: "center",
     padding: 15,
@@ -28,6 +29,7 @@ const styles = StyleSheet.create({
     color: colors.white,
     textTransform: "uppercase",
     fontWeight: "bold",
+    fontSize:15,
   },
 });
 
