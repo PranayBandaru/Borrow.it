@@ -4,9 +4,9 @@ import { StyleSheet, Text, View } from 'react-native';
 import HomeScreen from './app/screens/HomeScreen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import LoginScreen from './app/screens/LoginScreen';
-import SignInScreen from './app/screens/SignInScreen';
+import SignUpScreen from './app/screens/SignUpScreen';
 
 export default function App() {
-  return <LoginScreen />
+  return <SignUpScreen />
 }
 

@@ -23,13 +23,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     padding: 15,
     borderRadius: 25,
-    marginTop: 10,
+    marginTop: 25,
   },
   text: {
     color: colors.white,
     textTransform: "uppercase",
-    fontWeight: "bold",
-    fontSize:15,
+    fontWeight: "200",
+    fontSize: 12,
+    letterSpacing: 3,
   },
 });
 
