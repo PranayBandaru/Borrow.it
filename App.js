@@ -7,9 +7,10 @@ import LoginScreen from './app/screens/LoginScreen';
 import SignUpScreen from './app/screens/SignUpScreen';
 import AccountScreen from './app/screens/AccountScreen';
 import MessageScreen from './app/screens/MessageScreen';
+import PostsScreen from './app/screens/PostsScreen';
 
 
 export default function App() {
-  return <LoginScreen />
+  return <PostsScreen />
 }
 
