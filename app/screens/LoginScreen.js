@@ -14,7 +14,7 @@ function LoginScreen(props) {
             <TextInput style={styles.userNameBar} placeholder="Username" />
             <TextInput secureTextEntry={true} style={styles.passwordBar} placeholder="Password" />
             <AppButton title="Login" color="#0c7171" onPress={() => { props.navigation.navigate('Home') }} />
-            <AppButton title="Sign up" color="#0c7171" onPress={() => { alert("You clicked for SignIn") }} />
+            <AppButton title="Sign up" color="#0c7171" onPress={() => { props.navigation.navigate('Signup') }} />
         </SafeAreaView>
     );
 }
