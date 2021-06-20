@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import * as Font from 'expo-font';
 import { StyleSheet, Text, View } from 'react-native';
 import HomeScreen from './app/screens/HomeScreen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
@@ -16,6 +17,13 @@ import { createAppContainer } from 'react-navigation';
 export default function App() {
   return <AppContainer />
 }
+
+const fetchFonts = () => {
+  return Font.loadAsync({
+  'centurygothic': require('./assets/fonts/CenturyGothic.ttf'),
+  'centurygothic-bold': require('./assets/fonts/CenturyGothic-bold.ttf'),
+  });
+  };
 
 const AppNavigator = createStackNavigator({
   Welcome: {
