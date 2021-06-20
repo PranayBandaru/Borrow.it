@@ -1,5 +1,7 @@
 import React from 'react';
 import { Image, StyleSheet, TextInput, View, Text, SafeAreaView, TouchableOpacity } from 'react-native';
+import { StackNavigator } from 'react-navigation';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 function HomeScreen(props) {
     return (
@@ -69,11 +71,11 @@ function HomeScreen(props) {
             </View>
             <TextInput style={styles.searchBar} placeholder="Search" />
             <View style={styles.taskBar}>
-                <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                <TouchableOpacity onPress={() => { props.navigation.navigate('Home') }}>
                     <Image style={styles.homeIcon} source={require("../assets/home.png")} />
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                <TouchableOpacity onPress={() => { props.navigation.navigate('Messages') }}>
                     <Image style={styles.chatsIcon} source={require("../assets/chats.png")} />
                 </TouchableOpacity>
 
@@ -81,11 +83,11 @@ function HomeScreen(props) {
                     <Image style={styles.postIcon} source={require("../assets/post.png")} />
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                <TouchableOpacity onPress={() => { props.navigation.navigate('Posts') }}>
                     <Image style={styles.myPostsIcon} source={require("../assets/my_posts.png")} />
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                <TouchableOpacity onPress={() => { props.navigation.navigate('Account') }}>
                     <Image style={styles.accountIcon} source={require("../assets/account.png")} />
                 </TouchableOpacity>
             </View>

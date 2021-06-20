@@ -1,5 +1,5 @@
 import React from 'react';
-import {View,FlatList} from "react-native";
+import { Image, StyleSheet, TextInput, Button, View, Text, SafeAreaView, TouchableOpacity } from 'react-native';
 function ChatScreen(props) {
     return (
         <View style={styles.container}>
@@ -9,6 +9,8 @@ function ChatScreen(props) {
 }
 
 const styles = StyleSheet.create({
-    
+    container: {
+        flex: 1
+    }
 })
 export default ChatScreen;
