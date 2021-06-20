@@ -6,9 +6,10 @@ import WelcomeScreen from './app/screens/WelcomeScreen';
 import LoginScreen from './app/screens/LoginScreen';
 import SignUpScreen from './app/screens/SignUpScreen';
 import AccountScreen from './app/screens/AccountScreen';
+import MessageScreen from './app/screens/MessageScreen';
 
 
 export default function App() {
-  return <AccountScreen />
+  return <MessageScreen />
 }
 

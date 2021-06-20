@@ -34,6 +34,36 @@ function AccountScreen(props) {
             disabled={true}
           />
         </View>
+        <View style={styles.myBorrowed}>
+          <AppListInfo
+            image={require("../assets/jacket.jpg")}
+            title="Shane"
+            style={{ borderRadius: 25, height:250, marginBottom:90, alignItems:"flex-start"}}
+            disabled={true}
+          />
+        </View>
+        <View style={[styles.container, { justifyContent: "flex-end" }]}>
+        <AppListInfo
+          title="My History"
+          iconType="logout"
+          iconBackground="#ffe66d"
+          iconColor={colors.white}
+          //onPress={handleLogout}
+          style={{ borderRadius: 35 }}
+          touchable={true}
+        />
+        </View>
+        <View style={[styles.container, { justifyContent: "flex-end"}]}>
+        <AppListInfo
+          title="Logout"
+          iconType="logout"
+          iconBackground="#ffe66d"
+          iconColor={colors.white}
+          //onPress={handleLogout}
+          style={{ borderRadius: 35 }}
+          touchable={true}
+        />
+        </View>
         </AppScreen>
     );
 }
@@ -49,5 +79,15 @@ const styles = StyleSheet.create({
         shadowOpacity: 1,
     shadowRadius: 2,
   },
+  myBorrowed:{
+    padding: 10,
+    shadowColor: colors.light,
+    shadowOffset: {
+      width: 1,
+      height: 2,
+    },
+    shadowOpacity: 1,
+shadowRadius: 2,
+  }
 })
 export default AccountScreen;
