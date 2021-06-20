@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
   detailsContainer: {
     flexDirection: "column",
     flex: 1,
-    marginLeft: 10,
+    marginLeft: 20,
   },
   subTitle: {
     color: colors.medium,
