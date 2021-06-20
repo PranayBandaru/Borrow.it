@@ -5,7 +5,7 @@ import { Image, StyleSheet, TextInput, Button, View, Text, SafeAreaView, Touchab
 function SignUpScreen(props) {
     return (
         <SafeAreaView style={styles.window}>
-            <Text style={styles.pageHeader}>  Sign Up</Text>
+            <Text style={styles.pageHeader}>Sign Up</Text>
             <Text style={styles.labels}>First Name</Text>
             <TextInput style={styles.userinputs} placeholder="FirstName" />
             <Text style={styles.labels}>Last Name</Text>
@@ -17,7 +17,7 @@ function SignUpScreen(props) {
             <Text style={styles.labels}>Re-Type Password</Text>
             <TextInput secureTextEntry={true} style={styles.userinputs} placeholder="Re-Password" />
             <TouchableOpacity style={styles.buttonContainer} onPress={() => { alert("You clicked for login") }}>
-                <Text style={styles.buttonText}>  Sign Up</Text>
+                <Text style={styles.buttonText}>Sign Up</Text>
             </TouchableOpacity>
 
         </SafeAreaView>
