@@ -79,7 +79,7 @@ function HomeScreen(props) {
                     <Image style={styles.chatsIcon} source={require("../assets/chats.png")} />
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                <TouchableOpacity onPress={() => { props.navigation.navigate('NewPost') }}>
                     <Image style={styles.postIcon} source={require("../assets/post.png")} />
                 </TouchableOpacity>
 

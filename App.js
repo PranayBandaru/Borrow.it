@@ -10,18 +10,20 @@ import AccountScreen from './app/screens/AccountScreen';
 import MessageScreen from './app/screens/MessageScreen';
 import PostsScreen from './app/screens/PostsScreen';
 import ChatScreen from './app/screens/ChatScreen';
+import NewPostScreen from './app/screens/NewPostScreen';
 import { StackNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 
 export default function App() {
+  //return <NewPostScreen />
   return <AppContainer />
 }
 
 const fetchFonts = () => {
   return Font.loadAsync({
-  'centurygothic': require('./assets/fonts/CenturyGothic.ttf'),
-  'centurygothic-bold': require('./assets/fonts/CenturyGothic-bold.ttf'),
+  'centurygothic': require('./app/assets/fonts/CenturyGothic.ttf'),
+  'centurygothic-bold': require('./app/assets/fonts/CenturyGothic-Bold.ttf'),
   });
   };
 
@@ -58,6 +60,9 @@ const AppNavigator = createStackNavigator({
   },
   Chats: {
     screen: ChatScreen
+  },
+  NewPost: {
+    screen: NewPostScreen
   }
 
 }, {

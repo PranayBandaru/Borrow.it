@@ -22,11 +22,14 @@ const validationSchema = Yup.object().shape({
 });
 
 const categories = [
-  { label: "Furniture", id: 1 },
-  { label: "Clothing", id: 2 },
-  { label: "Camera", id: 3 },
-  { label: "Mobile", id: 4 },
-  { label: "Games", id: 5 },
+  { label: "Sports", id: 1 },
+  { label: "Music Instruments", id: 2 },
+  { label: "Books", id: 3 },
+  { label: "Stationery", id: 4 },
+  { label: "Electronic Devices", id: 5 },
+  { label: "Clothing", id: 6 },
+  { label: "Accessories", id: 7 },
+  { label: "Other", id: 8 },
 ];
 
 function AppListingForm(props) {
