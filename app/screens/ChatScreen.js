@@ -3,7 +3,7 @@ import {View, ScrollView, Text, Button, StyleSheet} from 'react-native';
 import {Bubble, GiftedChat, Send} from 'react-native-gifted-chat';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-
+ 
 const ChatScreen = () => {
   const [messages, setMessages] = useState([]);
 
