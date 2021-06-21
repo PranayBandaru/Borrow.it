@@ -8,6 +8,8 @@ import FormField from "../components/forms/FormField";
 import PickerField from "../components/forms/PickerField";
 import SubmitButton from "../components/forms/SubmitButton";
 import ImageField from "../components/forms/ImageIField";
+import * as Yup from "yup";
+
 
 
 const validationSchema = Yup.object().shape({

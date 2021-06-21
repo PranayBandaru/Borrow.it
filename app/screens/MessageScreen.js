@@ -12,6 +12,9 @@ import {
   MessageText,
   TextSection,
 } from '../components/styles/MessageStyles';
+import { StackNavigator } from 'react-navigation';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
+
 
 const Messages = [
   {
@@ -56,14 +59,14 @@ const Messages = [
   },
 ];
 
-const MessageScreen = ({ navigation }) => {
+const MessageScreen = (props) => {
   return (
     <Container>
       <FlatList
         data={Messages}
         keyExtractor={item => item.id}
         renderItem={({ item }) => (
-          <Card onPress={() => navigation.navigate('Chat', { userName: item.userName })}>
+          <Card onPress={() => {props.navigation.navigate('Chat', { userName: item.userName })}}>
             <UserInfo>
               <UserImgWrapper>
                 <UserImg source={item.userImg} />

@@ -14,6 +14,7 @@ import NewPostScreen from './app/screens/NewPostScreen';
 import { StackNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
+import { UserName } from './app/components/styles/MessageStyles';
 
 export default function App() {
   //return <NewPostScreen />
@@ -53,8 +54,11 @@ const AppNavigator = createStackNavigator({
     screen: AccountScreen
   },
   Messages: {
-    screen: MessageScreen
-  },
+    screen: MessageScreen,
+/*     navigationOptions: props => ({
+      userName: props.navigation.state.params.userName,
+    }),   
+ */  },
   Posts: {
     screen: PostsScreen
   },
