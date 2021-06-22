@@ -10,14 +10,23 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 function AccountScreen(props) {
 
+  const { userData } = require("../constants/constants.js");
+  var index;
+  for (let i = 0; i < userData.length; i++) {
+    if (userData[i].userName == props.navigation.state.params.username) {
+      index = i;
+      break;
+    }
+  }
 
+  console.log(index);
   return (
     <AppScreen style={{ backgroundColor: colors.light }}>
       <View style={styles.container}>
         <AppListInfo
           image={require("../assets/profile-photo.png")}
-          title="Shane"
-          subTitle="Shane@gg"
+          title={userData[index].firstName + " " + userData[index].lastName}
+          subTitle={userData[index].userName}
           style={{ borderRadius: 25 }}
           disabled={true}
         />

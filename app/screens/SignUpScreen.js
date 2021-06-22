@@ -1,8 +1,11 @@
 import React from 'react';
 import { Image, StyleSheet, TextInput, Button, View, Text, SafeAreaView, TouchableOpacity } from 'react-native';
-
+import { StackNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import { createAppContainer } from 'react-navigation';
 
 function SignUpScreen(props) {
+    var username;
     return (
         <SafeAreaView style={styles.window}>
             <Text style={styles.pageHeader}>Sign Up</Text>
@@ -13,12 +16,12 @@ function SignUpScreen(props) {
             <Text style={styles.labels} type="number">Phone Number</Text>
             <TextInput style={styles.userinputs} placeholder="Phone Number" />
             <Text style={styles.labels}>Email</Text>
-            <TextInput style={styles.userinputs} placeholder="Email" />
+            <TextInput style={styles.userinputs} placeholder="Email" onChangeText={(usernameimput) => { username = usernameimput }} />
             <Text style={styles.labels}>Password</Text>
             <TextInput secureTextEntry={true} style={styles.userinputs} placeholder="Password" />
             <Text style={styles.labels}>Re-Type Password</Text>
             <TextInput secureTextEntry={true} style={styles.userinputs} placeholder="Re-Password" />
-            <TouchableOpacity style={styles.buttonContainer} onPress={() => { alert("You clicked for login") }}>
+            <TouchableOpacity style={styles.buttonContainer} onPress={() => { props.navigation.navigate('Home', { username: username }) }}>
                 <Text style={styles.buttonText}>Sign Up</Text>
             </TouchableOpacity>
 

@@ -5,14 +5,14 @@ import { StackNavigator } from 'react-navigation';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 export default class PostsScreen extends Component {
-    constructor(props) {
-        super(props);
-        var items = Items;
-        this.state = { items: items };
-    }
-    
-    render(){
-    
+  constructor(props) {
+    super(props);
+    var items = Items;
+    this.state = { items: items };
+  }
+
+  render() {
+
     /*const connectToListing = (socket) => {
       socket.on("listing", (date) => {
         if (date.action === "create") createListing(date.listing);
@@ -61,7 +61,7 @@ export default class PostsScreen extends Component {
 
     return <AppListingItems items={items} />;
   }
-}  
+}
 
 
 
