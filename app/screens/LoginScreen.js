@@ -15,7 +15,6 @@ export default class LoginScreen extends Component {
         this.loginPress == this.loginPress.bind(this);
     }
 
-
     render() {
         return (
             <SafeAreaView style={styles.window}>
@@ -31,7 +30,7 @@ export default class LoginScreen extends Component {
     loginPress = () => {
         if (this.state.username.length != 0 && this.state.password.length != 0) {
             if (this.state.usernames.includes(this.state.username) && this.state.password == "test123") {
-                this.props.navigation.navigate('Home');
+                this.props.navigation.navigate('Home', { username: this.state.username });
             }
             else {
                 Alert.alert("Invalid credentials");

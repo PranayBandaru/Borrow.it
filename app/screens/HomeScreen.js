@@ -1,100 +1,102 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Image, StyleSheet, TextInput, View, Text, SafeAreaView, TouchableOpacity } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
-
-function HomeScreen(props) {
-    return (
-        <SafeAreaView style={styles.window}>
-            <View style={styles.topstrip}>
-                <Image style={styles.logo} source={require("../assets/organisation.png")} />
-                <Text numberOfLines={1} style={styles.orgName}>Mahindra University</Text>
-            </View>
-            <Text style={styles.browseCategoriesText}>Browse categories</Text>
-            <View style={styles.categories}>
-                <View style={styles.catRow}>
-                    <View style={styles.catIcons}>
-                        <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-                            <Image style={styles.catIcons} source={require("../assets/sports.png")} />
-                        </TouchableOpacity>
-
-                        <Text style={styles.categoriesText}>Sports goods</Text>
-                    </View>
-                    <View style={styles.catIcons} >
-                        <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-                            <Image style={styles.catIcons} source={require("../assets/music_instruments.png")} />
-                        </TouchableOpacity>
-                        <Text style={styles.categoriesText}>Music Supplies</Text>
-                    </View>
-                    <View style={styles.catIcons}>
-                        <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-                            <Image style={styles.catIcons} source={require("../assets/books.png")} />
-                        </TouchableOpacity>
-                        <Text style={styles.categoriesText}>Books</Text>
-                    </View>
-                    <View style={styles.catIcons}>
-                        <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-                            <Image style={styles.catIcons} source={require("../assets/stationery.png")} />
-                        </TouchableOpacity>
-                        <Text style={styles.categoriesText}>Stationery</Text>
-                    </View>
+export default class HomeScreen extends Component {
+    render(props) {
+        var orgname = this.props.navigation.state.params.username
+        orgname = orgname.split("@")[1].split(".")[0]
+        return (
+            <SafeAreaView style={styles.window}>
+                <View style={styles.topstrip}>
+                    <Image style={styles.logo} source={require("../assets/organisation.png")} />
+                    <Text numberOfLines={1} style={styles.orgName}>{orgname}</Text>
                 </View>
+                <Text style={styles.browseCategoriesText}>Browse categories</Text>
+                <View style={styles.categories}>
+                    <View style={styles.catRow}>
+                        <View style={styles.catIcons}>
+                            <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                                <Image style={styles.catIcons} source={require("../assets/sports.png")} />
+                            </TouchableOpacity>
 
-                <View style={styles.catRow}>
-                    <View style={styles.catIcons}>
-                        <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-                            <Image style={styles.catIcons} source={require("../assets/electronic_devices.png")} />
-                        </TouchableOpacity>
+                            <Text style={styles.categoriesText}>Sports goods</Text>
+                        </View>
+                        <View style={styles.catIcons} >
+                            <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                                <Image style={styles.catIcons} source={require("../assets/music_instruments.png")} />
+                            </TouchableOpacity>
+                            <Text style={styles.categoriesText}>Music Supplies</Text>
+                        </View>
+                        <View style={styles.catIcons}>
+                            <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                                <Image style={styles.catIcons} source={require("../assets/books.png")} />
+                            </TouchableOpacity>
+                            <Text style={styles.categoriesText}>Books</Text>
+                        </View>
+                        <View style={styles.catIcons}>
+                            <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                                <Image style={styles.catIcons} source={require("../assets/stationery.png")} />
+                            </TouchableOpacity>
+                            <Text style={styles.categoriesText}>Stationery</Text>
+                        </View>
+                    </View>
 
-                        <Text style={styles.categoriesText}>Electronic Devices</Text>
+                    <View style={styles.catRow}>
+                        <View style={styles.catIcons}>
+                            <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                                <Image style={styles.catIcons} source={require("../assets/electronic_devices.png")} />
+                            </TouchableOpacity>
+
+                            <Text style={styles.categoriesText}>Electronic Devices</Text>
+                        </View>
+                        <View style={styles.catIcons} >
+                            <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                                <Image style={styles.catIcons} source={require("../assets/suits.png")} />
+                            </TouchableOpacity>
+                            <Text style={styles.categoriesText}>Clothing</Text>
+                        </View>
+                        <View style={styles.catIcons}>
+                            <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                                <Image style={styles.catIcons} source={require("../assets/umbrella.png")} />
+                            </TouchableOpacity>
+                            <Text style={styles.categoriesText}>Accessories</Text>
+                        </View>
+                        <View style={styles.catIcons}>
+                            <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                                <Image style={styles.catIcons} source={require("../assets/other.png")} />
+                            </TouchableOpacity>
+                            <Text style={styles.categoriesText}>Others</Text>
+                        </View>
                     </View>
-                    <View style={styles.catIcons} >
-                        <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-                            <Image style={styles.catIcons} source={require("../assets/suits.png")} />
-                        </TouchableOpacity>
-                        <Text style={styles.categoriesText}>Clothing</Text>
-                    </View>
-                    <View style={styles.catIcons}>
-                        <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-                            <Image style={styles.catIcons} source={require("../assets/umbrella.png")} />
-                        </TouchableOpacity>
-                        <Text style={styles.categoriesText}>Accessories</Text>
-                    </View>
-                    <View style={styles.catIcons}>
-                        <TouchableOpacity onPress={() => { alert("you clicked me") }}>
-                            <Image style={styles.catIcons} source={require("../assets/other.png")} />
-                        </TouchableOpacity>
-                        <Text style={styles.categoriesText}>Others</Text>
-                    </View>
+
                 </View>
+                <TextInput style={styles.searchBar} placeholder="Search" />
+                <View style={styles.taskBar}>
+                    <TouchableOpacity onPress={() => { this.props.navigation.navigate('Home') }}>
+                        <Image style={styles.homeIcon} source={require("../assets/home.png")} />
+                    </TouchableOpacity>
 
-            </View>
-            <TextInput style={styles.searchBar} placeholder="Search" />
-            <View style={styles.taskBar}>
-                <TouchableOpacity onPress={() => { props.navigation.navigate('Home') }}>
-                    <Image style={styles.homeIcon} source={require("../assets/home.png")} />
-                </TouchableOpacity>
+                    <TouchableOpacity onPress={() => { this.props.navigation.navigate('Messages') }}>
+                        <Image style={styles.chatsIcon} source={require("../assets/chats.png")} />
+                    </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => { props.navigation.navigate('Messages') }}>
-                    <Image style={styles.chatsIcon} source={require("../assets/chats.png")} />
-                </TouchableOpacity>
+                    <TouchableOpacity onPress={() => { this.props.navigation.navigate('NewPost') }}>
+                        <Image style={styles.postIcon} source={require("../assets/post.png")} />
+                    </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => { props.navigation.navigate('NewPost') }}>
-                    <Image style={styles.postIcon} source={require("../assets/post.png")} />
-                </TouchableOpacity>
+                    <TouchableOpacity onPress={() => { this.props.navigation.navigate('Posts') }}>
+                        <Image style={styles.myPostsIcon} source={require("../assets/my_posts.png")} />
+                    </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => { props.navigation.navigate('Posts') }}>
-                    <Image style={styles.myPostsIcon} source={require("../assets/my_posts.png")} />
-                </TouchableOpacity>
-
-                <TouchableOpacity onPress={() => { props.navigation.navigate('Account') }}>
-                    <Image style={styles.accountIcon} source={require("../assets/account.png")} />
-                </TouchableOpacity>
-            </View>
-        </SafeAreaView>
-    );
+                    <TouchableOpacity onPress={() => { this.props.navigation.navigate('Account') }}>
+                        <Image style={styles.accountIcon} source={require("../assets/account.png")} />
+                    </TouchableOpacity>
+                </View>
+            </SafeAreaView>
+        );
+    }
 }
-
 const styles = StyleSheet.create({
     accountIcon: {
         height: 26,
@@ -167,7 +169,8 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: "bold",
         marginLeft: 10,
-        width: "70%"
+        width: "70%",
+        textTransform: "uppercase"
     },
     searchBar: {
         width: '92%',
@@ -202,5 +205,3 @@ const styles = StyleSheet.create({
     },
 })
 
-
-export default HomeScreen;
