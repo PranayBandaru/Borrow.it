@@ -15,7 +15,7 @@ function AccountScreen(props) {
     <AppScreen style={{ backgroundColor: colors.light }}>
       <View style={styles.container}>
         <AppListInfo
-          image={require("../assets/jacket.jpg")}
+          image={require("../assets/profile-photo.png")}
           title="Shane"
           subTitle="Shane@gg"
           style={{ borderRadius: 25 }}
@@ -24,7 +24,7 @@ function AccountScreen(props) {
       </View>
       {/*<View style={styles.myBorrowed}>
         <AppListInfo
-          image={require("../assets/jacket.jpg")}
+          image={require("../assets/profile-photo.png")}
           title="Shane"
           style={{ borderRadius: 25, height: 250, marginBottom: 90, alignItems: "flex-start" }}
           disabled={true}

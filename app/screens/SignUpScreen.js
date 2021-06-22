@@ -10,6 +10,8 @@ function SignUpScreen(props) {
             <TextInput style={styles.userinputs} placeholder="FirstName" />
             <Text style={styles.labels}>Last Name</Text>
             <TextInput style={styles.userinputs} placeholder="LastName" />
+            <Text style={styles.labels} type="number">Phone Number</Text>
+            <TextInput style={styles.userinputs} placeholder="Phone Number" />
             <Text style={styles.labels}>Email</Text>
             <TextInput style={styles.userinputs} placeholder="Email" />
             <Text style={styles.labels}>Password</Text>
@@ -39,7 +41,7 @@ const styles = StyleSheet.create({
         width: '60%',
         height: 40,
         paddingLeft: 20,
-        marginBottom: 30,
+        marginBottom: 26,
         borderWidth: 1,
         borderRadius: 20,
         borderBottomWidth: 2,
