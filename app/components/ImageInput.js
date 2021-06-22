@@ -15,7 +15,7 @@ function ImageInput({ imageUri, onChangeImage }) {
   const [didMount, setDidMount] = useState(false);
 
   const requestPermission = async () => {
-    const { granted } = await ImagePicker.requestCameraRollPermissionsAsync();
+    const { granted } = await ImagePicker.requestMediaLibraryPermissionsAsync();
     if (!granted)
       alert("You need to enable permission go to setting and enable it");
   };

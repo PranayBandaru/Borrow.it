@@ -1,23 +1,47 @@
-import React from 'react';
-import { Image, StyleSheet, TextInput, SafeAreaView } from 'react-native';
+import React, { Component } from 'react';
+import { Image, StyleSheet, TextInput, SafeAreaView, Alert } from 'react-native';
 
 import AppButton from '../components/AppButton';
 import { StackNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 
+export default class LoginScreen extends Component {
+    constructor(props) {
+        super(props);
+        var usernames = [];
+        usernames = ["pranay18539@mechyd.ac.in", "shanmukha18551@mechyd.ac.in", "sailahar18569@mechyd.ac.in", "lalith18526@mechyd.ac.in"];
+        this.state = { username: "", password: "", usernames: usernames };
+        this.loginPress == this.loginPress.bind(this);
+    }
 
-function LoginScreen(props) {
-    return (
-        <SafeAreaView style={styles.window}>
-            <Image source={require("../assets/borrowit-logo.png")} />
-            <TextInput style={styles.userNameBar} placeholder="Username" />
-            <TextInput secureTextEntry={true} style={styles.passwordBar} placeholder="Password" />
-            <AppButton title="Login" color="#0c7171" onPress={() => { props.navigation.navigate('Home') }} />
-            <AppButton title="Sign up" color="#0c7171" onPress={() => { props.navigation.navigate('Signup') }} />
-        </SafeAreaView>
-    );
+    render() {
+        return (
+            <SafeAreaView style={styles.window}>
+                <Image source={require("../assets/borrowit-logo.png")} />
+                <TextInput ref="username" onChangeText={(username) => { this.setState({ username }) }} style={styles.userNameBar} placeholder="Username" />
+                <TextInput secureTextEntry={true} ref="password" onChangeText={(password) => { this.setState({ password }) }} style={styles.passwordBar} placeholder="Password" />
+                <AppButton title="Login" color="#0c7171" onPress={this.loginPress} />
+                <AppButton title="Sign up" color="#0c7171" onPress={() => { this.props.navigation.navigate('Signup') }} />
+            </SafeAreaView>
+        );
+    }
+
+    loginPress = () => {
+        if (this.state.username.length != 0 && this.state.password.length != 0) {
+            if (this.state.usernames.includes(this.state.username) && this.state.password == "test123") {
+                this.props.navigation.navigate('Home', { username: this.state.username });
+            }
+            else {
+                Alert.alert("Invalid credentials");
+            }
+        }
+        else {
+            Alert.alert("Username or password fields empty");
+        }
+    }
 }
+
 
 const styles = StyleSheet.create({
     window: {
@@ -55,4 +79,3 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
     },
 })
-export default LoginScreen;
