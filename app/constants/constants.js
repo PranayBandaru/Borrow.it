@@ -87,3 +87,30 @@ export const Items = [
           description: "Looking to lend my guitar since i have my project i wont be using it now"
       },  
 ]
+
+export const userData = [
+  {
+    firstName: "Pranay",
+    lastName: "Bandaru",
+    userName: "pranay18539@mechyd.ac.in",
+    phoneNumber: "9346795888"
+  },
+  {
+    firstName: "Shanmukha",
+    lastName: "Sreenivas",
+    userName: "shanmukha18551@mechyd.ac.in",
+    phoneNumber: "6303456328"
+  },
+  {
+    firstName: "SaiLahar",
+    lastName: "Yandapalli",
+    userName: "sailahar18569@mechyd.ac.in",
+    phoneNumber: "9346795888"
+  },
+  {
+    firstName: "Lalith",
+    lastName: "Gali",
+    userName: "lalith18526@mechyd.ac.in",
+    phoneNumber: "9346795888"
+  }
+]

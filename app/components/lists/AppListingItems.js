@@ -6,10 +6,15 @@ import Items from "./Items";
 import AppScreen from "../AppScreen";
 import ListItemSeparator from "./ItemSeparatorComponent";
 
-function AppListingItems(props/*{ items, handleRefresh }*/) {
-  //const [refreshing, setRefreshing] = useState(false);
+export default class AppListingItems extends Component {
+  
+  constructor(props) {
+    super(props);
+    this.onclick == this.onclick.bind(this);
+  }
 
-  //const navigation = useNavigation();
+  render(props){
+  var items = this.props.navigation.state.params.items
   return (
     <AppScreen>
       <FlatList
@@ -22,12 +27,7 @@ function AppListingItems(props/*{ items, handleRefresh }*/) {
             imageUri={`.../assets/${item.listingId}.jpeg`}
             title={item.title}
             price={item.price}
-            onPress={() =>
-              props.navigation.navigate("ListingDetails"/*, {
-                ...item,
-                imageUri: `http://192.168.1.13:9000/listingImage-${item.listingId}`,
-              }*/)
-            }
+            onPress={onclick}
           />
         )}
         /*refreshing={refreshing}
@@ -40,9 +40,13 @@ function AppListingItems(props/*{ items, handleRefresh }*/) {
     </AppScreen>
   );
 }
+  onclick = () =>{
+      this.props.navigation.navigate("ListingDetails", {...item,imageUri: `.../assets/${item.listingId}.jpeg`,});
+  }
+
+}
 
 const styles = StyleSheet.create({
   container: {},
 });
 
-export default AppListingItems;

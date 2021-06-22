@@ -8,19 +8,6 @@ import colors from "../config/colors";
 import { StackNavigator } from 'react-navigation';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-/*const menuItems = [
-    {
-      title: "My Listings",
-      icon: { name: "format-list-bulleted", backgroundColor: colors.primary },
-      targeScreen: "MyListings",
-    },
-    {
-      title: "My Messages",
-      icon: { name: "email", backgroundColor: colors.secondary },
-      targeScreen: "Messages",
-    },
-  ];
- */
 function AccountScreen(props) {
 
 
@@ -35,14 +22,14 @@ function AccountScreen(props) {
           disabled={true}
         />
       </View>
-      <View style={styles.myBorrowed}>
+      {/*<View style={styles.myBorrowed}>
         <AppListInfo
           image={require("../assets/jacket.jpg")}
           title="Shane"
           style={{ borderRadius: 25, height: 250, marginBottom: 90, alignItems: "flex-start" }}
           disabled={true}
         />
-      </View>
+  </View>
       <View style={[styles.container, { justifyContent: "flex-end" }]}>
         <AppListInfo
           title="My History"
@@ -53,7 +40,7 @@ function AccountScreen(props) {
           style={{ borderRadius: 35 }}
           touchable={true}
         />
-      </View>
+      </View>*/}
       <View style={[styles.container, { justifyContent: "flex-end" }]}>
         <AppListInfo
           title="Logout"
@@ -91,4 +78,5 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
   }
 })
+
 export default AccountScreen;

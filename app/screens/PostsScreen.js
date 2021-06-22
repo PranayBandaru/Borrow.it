@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { Component } from "react";
 import AppListingItems from "../components/lists/AppListingItems";
 import Items from '../constants/constants';
 import { StackNavigator } from 'react-navigation';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-function PostsScreen(props) {
-    let [items, setItems] = useState([]);
-  //  const [fetched, setFetched] = useState(false);  
-  //  let listings = [];
-  
-    useEffect(() => {
-      setItems(Items);
-    }, []);
-  
+export default class PostsScreen extends Component {
+    constructor(props) {
+        super(props);
+        var items = Items;
+        this.state = { items: items };
+    }
+    
+    render(){
+    
     /*const connectToListing = (socket) => {
       socket.on("listing", (date) => {
         if (date.action === "create") createListing(date.listing);
@@ -57,11 +57,11 @@ function PostsScreen(props) {
   
       setItems(() => [...[], ...listings]);
     };*/
-  
+    this.props.navigation.navigate('ListingItems', { items: this.state.items });
+
     return <AppListingItems items={items} />;
   }
-  
-export default PostsScreen;
+}  
 
 
 
