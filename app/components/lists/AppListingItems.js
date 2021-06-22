@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState ,Component} from "react";
 import { View, StyleSheet, FlatList } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-
+//import { Item } from '.../constants/constants';
 import Items from "./Items";
 import AppScreen from "../AppScreen";
 import ListItemSeparator from "./ItemSeparatorComponent";
+
 
 export default class AppListingItems extends Component {
   
@@ -12,9 +13,9 @@ export default class AppListingItems extends Component {
     super(props);
     this.onclick == this.onclick.bind(this);
   }
-
-  render(props){
-  var items = this.props.navigation.state.params.items
+  
+  render(){
+  var items = this.props.navigation.state.params.items;
   return (
     <AppScreen>
       <FlatList
@@ -41,7 +42,7 @@ export default class AppListingItems extends Component {
   );
 }
   onclick = () =>{
-      this.props.navigation.navigate("ListingDetails", {...item,imageUri: `.../assets/${item.listingId}.jpeg`,});
+      this.props.navigation.navigate("ListingDetails", {item,imageUri: `.../assets/${item.listingId}.jpeg`,});
   }
 
 }
