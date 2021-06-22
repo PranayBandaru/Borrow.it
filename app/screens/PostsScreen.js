@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import AppListingItems from "../components/lists/AppListingItems";
-import Items from '../constants/constants';
+import { Item } from '../constants/constants';
 import { StackNavigator } from 'react-navigation';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 export default class PostsScreen extends Component {
   constructor(props) {
     super(props);
-    var items = Items;
+    var items = Item;
     this.state = { items: items };
   }
 
@@ -57,9 +57,10 @@ export default class PostsScreen extends Component {
   
       setItems(() => [...[], ...listings]);
     };*/
+    console.log(this.state.items);
     this.props.navigation.navigate('ListingItems', { items: this.state.items });
 
-    return <AppListingItems items={items} />;
+    return <AppListingItems />;
   }
 }
 

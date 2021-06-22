@@ -1,10 +1,11 @@
 import React, { useState, Component } from "react";
 import { View, StyleSheet, FlatList } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-
+//import { Item } from '.../constants/constants';
 import Items from "./Items";
 import AppScreen from "../AppScreen";
 import ListItemSeparator from "./ItemSeparatorComponent";
+
 
 export default class AppListingItems extends Component {
 

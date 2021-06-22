@@ -42,7 +42,7 @@ export const Messages = [
   },
 ];
 
-export const Items = [
+export const Item = [
   {
     listingId: 102,
     title: "Guitar",
