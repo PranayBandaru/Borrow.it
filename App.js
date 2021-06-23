@@ -19,7 +19,6 @@ import AppListingItems from './app/components/lists/AppListingItems';
 import ListingDetailsScreen from './app/components/ListingDetailsScreen';
 
 export default function App() {
-  //return <NewPostScreen />
   return <AppContainer />
 }
 
@@ -57,10 +56,7 @@ const AppNavigator = createStackNavigator({
   },
   Messages: {
     screen: MessageScreen,
-/*     navigationOptions: props => ({
-      userName: props.navigation.state.params.userName,
-    }),   
- */  },
+  },
   Posts: {
     screen: PostsScreen
   },

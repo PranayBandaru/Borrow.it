@@ -25,7 +25,7 @@ export default class AppListingItems extends Component {
         ItemSeparatorComponent={ListItemSeparator}
         renderItem={({ item }) => (
           <Items
-            imageUri={`.../assets/${item.listingId}.jpeg`}
+            imageUri={`../../../assets/${item.listingId}.jpeg`}
             title={item.title}
             price={item.price}
             onPress={onclick}
@@ -42,7 +42,7 @@ export default class AppListingItems extends Component {
   );
 }
   onclick = () =>{
-      this.props.navigation.navigate("ListingDetails", {item,imageUri: `.../assets/${item.listingId}.jpeg`,});
+      this.props.navigation.navigate("ListingDetails", {item : item ,imageUri: `../../../assets/${item.listingId}.jpeg`,});
   }
 
 }
