@@ -52,6 +52,16 @@ function AccountScreen(props) {
       </View>*/}
       <View style={[styles.container, { justifyContent: "flex-end" }]}>
         <AppListInfo
+          title="Point Balance: 280"
+          iconType="credit-card-outline"
+          iconBackground="#ffe66d"
+          iconColor={colors.white}
+          style={{ borderRadius: 35 }}
+          touchable={true}
+        />
+      </View>
+      <View style={[styles.container, { justifyContent: "flex-end" }]}>
+        <AppListInfo
           title="Logout"
           iconType="logout"
           iconBackground="#ffe66d"
@@ -61,6 +71,7 @@ function AccountScreen(props) {
           touchable={true}
         />
       </View>
+
     </AppScreen>
   );
 }
