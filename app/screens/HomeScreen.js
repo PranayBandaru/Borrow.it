@@ -4,8 +4,8 @@ import { StackNavigator } from 'react-navigation';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 export default class HomeScreen extends Component {
     render(props) {
-        var orgname = this.props.navigation.state.params.username
-        orgname = orgname.split("@")[1].split(".")[0]
+        var username = this.props.navigation.state.params.username
+        var orgname = username.split("@")[1].split(".")[0]
         return (
             <SafeAreaView style={styles.window}>
                 <View style={styles.topstrip}>
@@ -89,7 +89,7 @@ export default class HomeScreen extends Component {
                         <Image style={styles.myPostsIcon} source={require("../assets/my_posts.png")} />
                     </TouchableOpacity>
 
-                    <TouchableOpacity onPress={() => { this.props.navigation.navigate('Account') }}>
+                    <TouchableOpacity onPress={() => { this.props.navigation.navigate('Account', { username: username }) }}>
                         <Image style={styles.accountIcon} source={require("../assets/account.png")} />
                     </TouchableOpacity>
                 </View>

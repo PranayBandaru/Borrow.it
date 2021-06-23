@@ -10,21 +10,30 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 function AccountScreen(props) {
 
+  const { userData } = require("../constants/constants.js");
+  var index;
+  for (let i = 0; i < userData.length; i++) {
+    if (userData[i].userName == props.navigation.state.params.username) {
+      index = i;
+      break;
+    }
+  }
 
+  console.log(index);
   return (
     <AppScreen style={{ backgroundColor: colors.light }}>
       <View style={styles.container}>
         <AppListInfo
-          image={require("../assets/jacket.jpg")}
-          title="Shane"
-          subTitle="Shane@gg"
+          image={require("../assets/profile-photo.png")}
+          title={userData[index].firstName + " " + userData[index].lastName}
+          subTitle={userData[index].userName}
           style={{ borderRadius: 25 }}
           disabled={true}
         />
       </View>
       {/*<View style={styles.myBorrowed}>
         <AppListInfo
-          image={require("../assets/jacket.jpg")}
+          image={require("../assets/profile-photo.png")}
           title="Shane"
           style={{ borderRadius: 25, height: 250, marginBottom: 90, alignItems: "flex-start" }}
           disabled={true}
