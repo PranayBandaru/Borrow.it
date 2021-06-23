@@ -57,8 +57,8 @@ export default class PostsScreen extends Component {
   
       setItems(() => [...[], ...listings]);
     };*/
-    console.log(this.state.items);
-    this.props.navigation.navigate('ListingItems', { items: this.state.items });
+    //console.log(this.state.items);
+    //this.props.navigation.navigate('ListingItems', { items: this.state.items });
 
     return <AppListingItems />;
   }
