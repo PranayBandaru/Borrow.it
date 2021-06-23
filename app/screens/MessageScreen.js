@@ -25,7 +25,7 @@ export default class MessageScreen extends Component {
         data={Messages}
         keyExtractor={item => item.id}
         renderItem={({ item }) => (
-          <Card onPress={() => { this.props.navigation.navigate('Chats', { userName: item.userName }) }}>
+          <Card onPress={() => { this.props.navigation.navigate('ChatsDisplay', { userName: item.userName }) }}>
             <UserInfo>
               <UserImgWrapper>
                 <UserImg source={item.userImg} />

@@ -22,7 +22,7 @@ import PostsMusicScreen from './app/screens/PostsMusicScreen';
 import PostsEDScreen from './app/screens/PostsEDScreen';
 import PostsAccessoryScreen from './app/screens/PostsAccessoryScreen';
 import PostsBooksScreen from './app/screens/PostsBooksScreen';
-
+import ChatDisplayScreen from './app/screens/ChatDisplayScreen'
 
 export default function App() {
   
@@ -73,6 +73,9 @@ const AppNavigator = createStackNavigator({
   },
   Chats: {
     screen: ChatScreen
+  },
+  ChatsDisplay: {
+    screen: ChatDisplayScreen
   },
   NewPost: {
     screen: NewPostScreen

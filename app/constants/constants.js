@@ -6,7 +6,7 @@ export const Messages = [
     userImg: require('../assets/jacket.jpg'),
     messageTime: '2 days ago',
     messageText:
-      'Hey there, this is my test for a post of my social app in React Native.',
+      'Tap to view the Conversation',
   },
 ];
 
