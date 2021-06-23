@@ -30,6 +30,9 @@ export default class LoginScreen extends Component {
     loginPress = () => {
         if (this.state.username.length != 0 && this.state.password.length != 0) {
             if (this.state.usernames.includes(this.state.username) && this.state.password == "test123") {
+                //console.log("Before");
+                this.sleep(1000);
+                //console.log("AFter");
                 this.props.navigation.navigate('Home', { username: this.state.username });
             }
             else {
@@ -38,6 +41,14 @@ export default class LoginScreen extends Component {
         }
         else {
             Alert.alert("Username or password fields empty");
+        }
+    }
+    sleep = (milliseconds) => {
+        var start = new Date().getTime();
+        for (var i = 0; i < 1e7; i++) {
+            if ((new Date().getTime() - start) > milliseconds) {
+                break;
+            }
         }
     }
 }
