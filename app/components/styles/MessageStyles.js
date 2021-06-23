@@ -15,6 +15,7 @@ export const Card = styled.TouchableOpacity`
 export const UserInfo = styled.View`
   flex-direction: row;
   justify-content: space-between;
+  font-family: 'centurygothic';
 `;
 
 export const UserImgWrapper = styled.View`
@@ -37,12 +38,14 @@ export const TextSection = styled.View`
   width: 300px;
   border-bottom-width: 1px;
   border-bottom-color: #cccccc;
+  font-family: 'centurygothic';
 `;
 
 export const UserInfoText = styled.View`
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 5px;
+  font-family: 'centurygothic';
 `;
 
 export const UserName = styled.Text`
@@ -60,4 +63,5 @@ export const PostTime = styled.Text`
 export const MessageText = styled.Text`
   font-size: 14px;
   color: #333333;
+  font-family: 'centurygothic';
 `;

@@ -33,7 +33,7 @@ export default class ListingDetailsScreen extends Component {
       />
       <View style={[styles.buttoncontainer, { justifyContent: "flex-end" }]}>
         <AppListInfo
-          title="Chat with owner"
+          title="Contact the owner"
           onPress={() => { this.props.navigation.navigate('Chats') }}
           style={{ borderRadius: 35 }}
           touchable={true}

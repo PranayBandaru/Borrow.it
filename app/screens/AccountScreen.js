@@ -75,6 +75,7 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 1,
     shadowRadius: 2,
+    fontFamily: 'centurygothic',
   },
   myBorrowed: {
     padding: 10,

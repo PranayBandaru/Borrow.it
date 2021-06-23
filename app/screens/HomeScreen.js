@@ -37,7 +37,7 @@ export default class HomeScreen extends Component {
                             <Text style={styles.categoriesText}>Books</Text>
                         </View>
                         <View style={styles.catIcons}>
-                            <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                            <TouchableOpacity onPress={() => { alert("No Stationey Posted") }}>
                                 <Image style={styles.catIcons} source={require("../assets/stationery.png")} />
                             </TouchableOpacity>
                             <Text style={styles.categoriesText}>Stationery</Text>
@@ -53,19 +53,19 @@ export default class HomeScreen extends Component {
                             <Text style={styles.categoriesText}>Electronic Devices</Text>
                         </View>
                         <View style={styles.catIcons} >
-                            <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                            <TouchableOpacity onPress={() => { alert("No Clothing Posted") }}>
                                 <Image style={styles.catIcons} source={require("../assets/suits.png")} />
                             </TouchableOpacity>
                             <Text style={styles.categoriesText}>Clothing</Text>
                         </View>
                         <View style={styles.catIcons}>
-                            <TouchableOpacity onPress={() => { this.props.navigation.navigate('PostsAccersory') }}>
+                            <TouchableOpacity onPress={() => { this.props.navigation.navigate('PostsAccessory') }}>
                                 <Image style={styles.catIcons} source={require("../assets/umbrella.png")} />
                             </TouchableOpacity>
                             <Text style={styles.categoriesText}>Accessories</Text>
                         </View>
                         <View style={styles.catIcons}>
-                            <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                            <TouchableOpacity onPress={() => { alert("Nothing in Other") }}>
                                 <Image style={styles.catIcons} source={require("../assets/other.png")} />
                             </TouchableOpacity>
                             <Text style={styles.categoriesText}>Others</Text>

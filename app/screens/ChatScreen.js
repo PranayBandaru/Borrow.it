@@ -9,7 +9,7 @@ const ChatScreen = () => {
 
   useEffect(() => {
     setMessages([
-      {
+      /*{
         _id: 1,
         text: 'Hello',
         createdAt: new Date(),
@@ -100,5 +100,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    fontFamily: 'centurygothic'
   },
 });
