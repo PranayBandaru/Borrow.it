@@ -13,31 +13,31 @@ export const Messages = [
 export const Item = [
   {
     listingId: 102,
-    title: "Guitar",
+    title: "Fender Acoustic Guitar",
     price: 50,
     category: "Music Instruments",
     description: "Looking to lend my guitar since i have my project i wont be using it now"
   },
   {
     listingId: 101,
-    title: "Tennis Racket",
+    title: "Head Tennis Racket",
     price: 40,
     category: "Sports",
     description: "Looking to lend my guitar since i have my project i wont be using it now"
   },
   {
     listingId: 1031,
-    title: "Relativity",
+    title: "Theory of Relativity - Einstein",
     price: 10,
     category: "Books",
-    description: "Looking to lend my guitar since i have my project i wont be using it now"
+    description: "Looking to lend my Fender Acoustic Guitar since i have my project i wont be using it now"
   },
   {
     listingId: 1032,
-    title: "The Theory of Everything",
+    title: "The Theory of Everything - Hawking",
     price: 10,
     category: "Books",
-    description: "Looking to lend my guitar since i have my project i wont be using it now"
+    description: "Looking to lend my Fender Acoustic Guitar since i have my project i wont be using it now"
   },
   {
     listingId: 105,
@@ -48,7 +48,7 @@ export const Item = [
   },
   {
     listingId: 106,
-    title: "Puma Hat",
+    title: "Puma baseball cap",
     price: 5,
     category: "Accessories",
     description: "Looking to lend my guitar since i have my project i wont be using it now"
@@ -57,7 +57,7 @@ export const Item = [
 export const SportItem = [
   {
     listingId: 101,
-    title: "Tennis Racket",
+    title: "Head Tennis Racket",
     price: 40,
     category: "Sports",
     description: "Looking to lend my guitar since i have my project i wont be using it now"
@@ -68,7 +68,7 @@ export const SportItem = [
 export const AccessoryItem = [
   {
     listingId: 106,
-    title: "Puma Hat",
+    title: "Puma baseball cap",
     price: 5,
     category: "Accessories",
     description: "Looking to lend my guitar since i have my project i wont be using it now"
@@ -78,7 +78,7 @@ export const AccessoryItem = [
 export const MusicItem = [
   {
     listingId: 102,
-    title: "Guitar",
+    title: "Fender Acoustic Guitar",
     price: 50,
     category: "Music Instruments",
     description: "Looking to lend my guitar since i have my project i wont be using it now"
@@ -89,14 +89,14 @@ export const MusicItem = [
 export const BooksItem = [
   {
     listingId: 1031,
-    title: "Relativity",
+    title: "Theory of Relativity - Einstein",
     price: 10,
     category: "Books",
     description: "Looking to lend my guitar since i have my project i wont be using it now"
   },
   {
     listingId: 1032,
-    title: "The Theory of Everything",
+    title: "The Theory of Everything - Hawking",
     price: 10,
     category: "Books",
     description: "Looking to lend my guitar since i have my project i wont be using it now"
