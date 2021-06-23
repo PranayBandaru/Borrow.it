@@ -1,10 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
+import { render } from "react-dom";
 import { Image, View, StyleSheet, TouchableOpacity } from "react-native";
 
 import colors from "../../config/colors";
 import AppText from "../AppText";
 
-function Items({ imageUri, title, price, onPress, disabled = false }) {
+export default class Items extends Component {
+  
+  render({ imageUri, title, price, onPress, disabled = false }){
   return (
     <TouchableOpacity onPress={onPress} disabled={disabled}>
       <View style={styles.container}>
@@ -19,7 +22,7 @@ function Items({ imageUri, title, price, onPress, disabled = false }) {
     </TouchableOpacity>
   );
 }
-
+}
 const styles = StyleSheet.create({
   container: {
     shadowColor: colors.light,
@@ -54,4 +57,3 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Items;

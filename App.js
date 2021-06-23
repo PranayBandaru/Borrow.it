@@ -16,7 +16,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import { UserName } from './app/components/styles/MessageStyles';
 import AppListingItems from './app/components/lists/AppListingItems';
-import ListingDetailsScreen from './app/components/ListingDetailsScreen';
+import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 
 export default function App() {
   return <AppContainer />

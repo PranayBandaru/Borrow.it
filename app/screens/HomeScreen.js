@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Image, StyleSheet, TextInput, View, Text, SafeAreaView, TouchableOpacity } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
+import AppListingItems from '../components/lists/AppListingItems';
+
 export default class HomeScreen extends Component {
     render(props) {
         var username = this.props.navigation.state.params.username
@@ -71,6 +73,7 @@ export default class HomeScreen extends Component {
                     </View>
 
                 </View>
+                {/*<AppListingItems />*/}
                 <TextInput style={styles.searchBar} placeholder="Search" />
                 <View style={styles.taskBar}>
                     <TouchableOpacity onPress={() => { this.props.navigation.navigate('Home') }}>
@@ -93,6 +96,7 @@ export default class HomeScreen extends Component {
                         <Image style={styles.accountIcon} source={require("../assets/account.png")} />
                     </TouchableOpacity>
                 </View>
+                
             </SafeAreaView>
         );
     }
