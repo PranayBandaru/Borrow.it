@@ -27,10 +27,18 @@ export default class ListingDetailsScreen extends Component {
         </View>
       </View>
     </TouchableOpacity><AppListInfo
-        image={require("../assets/logo-red.png")}
-        title="Pranay"
+        image={require("../assets/profile-photo.png")}
+        title="Lahar"
         subTitle="6 Listings"
       />
+      <View style={[styles.buttoncontainer, { justifyContent: "flex-end" }]}>
+        <AppListInfo
+          title="Chat with owner"
+          onPress={() => { this.props.navigation.navigate('Chats') }}
+          style={{ borderRadius: 35 }}
+          touchable={true}
+        />
+      </View>
     </AppScreen>
   );
 }
@@ -39,7 +47,19 @@ export default class ListingDetailsScreen extends Component {
   }*/
 }
 
+
+
 const styles = StyleSheet.create({
+  buttoncontainer: {
+    padding: 10,
+    shadowColor: colors.light,
+    shadowOffset: {
+      width: 1,
+      height: 2,
+    },
+    shadowOpacity: 1,
+    shadowRadius: 2,
+  },  
   container: {
     shadowColor: colors.light,
     shadowOffset: {

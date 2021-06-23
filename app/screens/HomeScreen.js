@@ -18,20 +18,20 @@ export default class HomeScreen extends Component {
                 <View style={styles.categories}>
                     <View style={styles.catRow}>
                         <View style={styles.catIcons}>
-                            <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                            <TouchableOpacity onPress={() => { this.props.navigation.navigate('PostsSports') }}>
                                 <Image style={styles.catIcons} source={require("../assets/sports.png")} />
                             </TouchableOpacity>
 
                             <Text style={styles.categoriesText}>Sports goods</Text>
                         </View>
                         <View style={styles.catIcons} >
-                            <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                            <TouchableOpacity onPress={() => { this.props.navigation.navigate('PostsMusic') }}>
                                 <Image style={styles.catIcons} source={require("../assets/music_instruments.png")} />
                             </TouchableOpacity>
                             <Text style={styles.categoriesText}>Music Supplies</Text>
                         </View>
                         <View style={styles.catIcons}>
-                            <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                            <TouchableOpacity onPress={() => { this.props.navigation.navigate('PostsBooks') }}>
                                 <Image style={styles.catIcons} source={require("../assets/books.png")} />
                             </TouchableOpacity>
                             <Text style={styles.categoriesText}>Books</Text>
@@ -46,7 +46,7 @@ export default class HomeScreen extends Component {
 
                     <View style={styles.catRow}>
                         <View style={styles.catIcons}>
-                            <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                            <TouchableOpacity onPress={() => { this.props.navigation.navigate('PostsED') }}>
                                 <Image style={styles.catIcons} source={require("../assets/electronic_devices.png")} />
                             </TouchableOpacity>
 
@@ -59,7 +59,7 @@ export default class HomeScreen extends Component {
                             <Text style={styles.categoriesText}>Clothing</Text>
                         </View>
                         <View style={styles.catIcons}>
-                            <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                            <TouchableOpacity onPress={() => { this.props.navigation.navigate('PostsAccersory') }}>
                                 <Image style={styles.catIcons} source={require("../assets/umbrella.png")} />
                             </TouchableOpacity>
                             <Text style={styles.categoriesText}>Accessories</Text>

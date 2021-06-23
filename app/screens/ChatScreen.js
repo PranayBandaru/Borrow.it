@@ -11,7 +11,7 @@ const ChatScreen = () => {
     setMessages([
       {
         _id: 1,
-        text: 'Hello developer',
+        text: 'Hello',
         createdAt: new Date(),
         user: {
           _id: 2,
@@ -19,7 +19,7 @@ const ChatScreen = () => {
           avatar: 'https://placeimg.com/140/140/any',
         },
       },
-      {
+/*       {
         _id: 2,
         text: 'Hello world',
         createdAt: new Date(),
@@ -29,7 +29,7 @@ const ChatScreen = () => {
           avatar: 'https://placeimg.com/140/140/any',
         },
       },
-    ]);
+ */    ]);
   }, []);
 
   const onSend = useCallback((messages = []) => {

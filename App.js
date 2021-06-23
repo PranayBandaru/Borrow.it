@@ -17,6 +17,12 @@ import { createAppContainer } from 'react-navigation';
 import { UserName } from './app/components/styles/MessageStyles';
 import AppListingItems from './app/components/lists/AppListingItems';
 import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
+import PostsSportsScreen from './app/screens/PostsSportsScreen';
+import PostsMusicScreen from './app/screens/PostsMusicScreen';
+import PostsEDScreen from './app/screens/PostsEDScreen';
+import PostsAccessoryScreen from './app/screens/PostsAccessoryScreen';
+import PostsBooksScreen from './app/screens/PostsBooksScreen';
+
 
 export default function App() {
   return <AppContainer />
@@ -70,7 +76,40 @@ const AppNavigator = createStackNavigator({
     screen: AppListingItems
   },
   ListingDetails: {
-    screen: ListingDetailsScreen
+    screen: ListingDetailsScreen,
+    navigationOptions: {
+      headerShown: false,
+    }
+  },
+  PostsSports: {
+    screen: PostsSportsScreen,
+    navigationOptions: {
+      headerShown: false,
+    }
+  },
+  PostsBooks: {
+    screen: PostsBooksScreen,
+    navigationOptions: {
+      headerShown: false,
+    }
+  },
+  PostsMusic: {
+    screen: PostsMusicScreen,
+    navigationOptions: {
+      headerShown: false,
+    }
+  },
+  PostsED: {
+    screen: PostsEDScreen,
+    navigationOptions: {
+      headerShown: false,
+    }
+  },
+  PostsAccessory: {
+    screen: PostsAccessoryScreen,
+    navigationOptions: {
+      headerShown: false,
+    }
   },
 
 }, {
